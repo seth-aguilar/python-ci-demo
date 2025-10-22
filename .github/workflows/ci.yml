@@ -22,3 +22,7 @@ jobs:
         run: |
           export PYTHONPATH=$PWD
           pytest --maxfail=5 --disable-warnings
+      - name : Lint with flake8
+        run: |
+          pip install flake8
+          flake8 .
